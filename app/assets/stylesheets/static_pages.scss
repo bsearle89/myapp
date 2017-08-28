@@ -47,6 +47,27 @@ h1, h2, p {
 	padding: 10px;
 }
 
+/**** carousel ****/
+
+.carousel-image {
+	max-height: 100%;
+	max-width: 100%;
+	height: 450px;
+	width: 450px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.carousel-caption {
+	position: absolute;
+	margin-top: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 32px;
+	text-shadow: 3px 2px black;
+	font-weight: bold;
+}
+
 /**** sticky footer ****/
 
 .site-footer, .page-wrap:after {
