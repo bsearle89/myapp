@@ -30,9 +30,16 @@
 
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
-              <li><%= link_to "Products", products_path %><a href="/products"></a></li>
-              <li><%= link_to "About", static_pages_about_path %><a href="/static_pages/about"></a></li>
-              <li><%= link_to "Contact", static_pages_contact_path %><a href="/static_pages/contact"></a></li>
+              <li><%= link_to "Products", products_path %></li>
+              <li><%= link_to "About", static_pages_about_path %></li>
+              <li><%= link_to "Contact", static_pages_contact_path %></li>
+              <li>
+                <%= form_with(url: products_path, method: 'get') do |form| %>
+                  <%= form.label :q, 'Search for:' %>
+                  <%= form.text_field :q, id: 'q', value: params[:q] %>
+                  <%= form.submit 'Search' %>
+                <% end %>
+              </li>
             </ul> <!-- end navbar-right -->
           </div> <!-- end bs-example-navbar-collapse-1 -->
       
