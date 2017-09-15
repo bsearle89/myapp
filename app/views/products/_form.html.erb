@@ -11,32 +11,52 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name, id: :product_name %>
-  </div>
+  <div class="form-row product-top-row">
+    <div class="col-sm-12 col-md-6">
+      <div class="form-group field">
+        <%= form.label :name %>
+        <%= form.text_field :name, id: :product_name %>
+      </div> <!-- end form-group -->
+    </div> <!-- end col -->
+    <div class="col-sm-12 col-md-6">
+      <div class="form-group field">
+        <%= form.label :price %>
+        <%= form.text_field :price %>
+      </div> <!-- end form-group -->
+    </div> <!-- end col -->
+  </div> <!-- end product-top-row -->
+  <div class="form-row product-second-row">
+    <div class="col-sm-12 col-md-6">
+      <div class="form-group field">
+        <%= form.label :image_url %>
+        <%= form.text_field :image_url, id: :product_image_url %>
+      </div> <!-- end form-group -->
+    </div> <!-- end col -->
+    <div class="col-sm-12 col-md-6">
+      <div class="form-group field">
+        <%= form.label :colour %>
+        <%= form.text_field :colour %>
+      </div> <!-- end form-group -->
+    </div> <!-- end product-second-row -->
+  <div class="form-row product-description-row">
+    <div class="col-sm-12">
+      <div class="form-group field">
+        <%= form.label :description %>
+        <%= form.text_area :description, id: :product_description, rows: 5 %>
+      </div> <!-- end form-group -->
+    </div> <!-- end col -->
+  </div> <!-- end product-second-row -->
+  <div class="form-row submit-btn-row">
+    <div class="col-sm-12">
+      <div class="actions">
+        <%= form.submit %>
+      </div> <!-- end actions -->
+    </div> <!-- end col -->
+  </div> <!-- end submit-btn-row -->
 
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_area :description, id: :product_description %>
-  </div>
-
-  <div class="field">
-    <%= form.label :image_url %>
-    <%= form.text_field :image_url, id: :product_image_url %>
-  </div>
-
-  <div class="field">
-    <%= form.label :colour %>
-    <%= form.text_field :colour %>
-  </div>
-
-  <div class="field">
-    <%= form.label :price %>
-    <%= form.text_field :price %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
 <% end %>
+
+<!-- JavaScript -->
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>

@@ -17,3 +17,22 @@
 	margin-right: auto;
 	display: block;
 }
+
+/**** _form.html.erb ****/
+
+form {
+	display: inline-block;
+	margin-left: auto;
+	margin-right: auto;
+	text-display: left;
+	width: 60%;
+}
+
+.form-group input {
+	width: 100%;
+}
+
+.form-group textarea {
+	width: 50%;
+	margin-right: 10px;
+}
