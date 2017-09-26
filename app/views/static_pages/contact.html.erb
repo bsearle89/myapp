@@ -1,2 +1,24 @@
 <h1>Contact</h1>
 <p>Need a bike? Give me a call! <br > 07999 999 999</p>
+
+<%= flash[:notice] %>
+
+<%= form_with(url: "/static_pages/thank_you") do |form| %>
+	<div class="row">
+		<div class="col-md-4">
+			<div class="form-group">
+				<%= form.label :name %>
+				<%= form.text_field :name, class: "form-control", placeholder: "Enter Name" %>
+			</div> <!-- end form-group -->
+			<div class="form-group">
+				<%= form.label :email, "Email Address" %>
+				<%= form.text_field :email, class: "form-control", placeholder: "Enter Email" %>
+			</div> <!-- end form-group -->
+			<div class="form-group">
+				<%= form.label :message %>
+				<%= form.text_area :message, class: "form-control", placeholder: "Enter Message" %>
+			</div> <!-- end form-group -->
+		</div> <!-- end col -->
+	</div> <!-- end row -->
+	<%= form.submit "Send" %>
+<% end %>
