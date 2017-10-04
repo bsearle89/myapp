@@ -18,6 +18,11 @@
       <nav class="navbar navbar-default">
         <div class="container-fluid nav-container">
 
+          <div class="bulletin">
+            <p class="notice"><%= notice %></p>
+            <p class="alert"><%= alert %></p>
+          </div> <!-- end bulletin -->
+
           <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
               <span class="sr-only">Toggle navigation</span>
@@ -39,7 +44,17 @@
                   <%= form.submit 'Search', class: 'btn btn-default' %>
                 <% end %>
               </li>
+              <ul class="nav login-logout">
+                <li>
+                <% if user_signed_in? %>
+                  <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
+                <% else %>
+                  <%= link_to('Login', new_user_session_path) %>
+                <% end %>
+                </li>
+              </ul><!-- end login-logout -->
             </ul> <!-- end navbar-right -->
+            
           </div> <!-- end bs-example-navbar-collapse-1 -->
       
         </div> <!-- end nav-container -->

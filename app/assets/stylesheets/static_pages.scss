@@ -28,6 +28,11 @@ h1, h2, p {
 
 /**** navigation bar ****/
 
+.navbar {
+	max-height: 30px;
+	display: inline;
+}
+
 .navbar-header .navbar-brand {
 	position: relative;
 	left: 5px;
@@ -36,7 +41,11 @@ h1, h2, p {
 	max-height: 15px;
 }
 
-navbar-form {
+.bulletin {
+	width: 20%;
+}
+
+/*.navbar-form, .login-logout {
 	display: inline-block;
 }
 
@@ -54,7 +63,7 @@ navbar-form {
 	margin-right: 5px;
 	margin-top: auto;
 	margin-bottom: auto;
-}
+}*/
 
 /**** index ****/
 
@@ -124,3 +133,4 @@ h1 {
 p {
 	font-size: 18pt;
 }
+
