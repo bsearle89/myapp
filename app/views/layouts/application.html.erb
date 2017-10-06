@@ -44,15 +44,13 @@
                   <%= form.submit 'Search', class: 'btn btn-default' %>
                 <% end %>
               </li>
-              <ul class="nav login-logout">
-                <li>
-                <% if user_signed_in? %>
-                  <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
-                <% else %>
-                  <%= link_to('Login', new_user_session_path) %>
-                <% end %>
-                </li>
-              </ul><!-- end login-logout -->
+              <li>
+              <% if user_signed_in? %>
+                <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
+              <% else %>
+                <%= link_to('Login', new_user_session_path) %>
+              <% end %>
+              </li>
             </ul> <!-- end navbar-right -->
             
           </div> <!-- end bs-example-navbar-collapse-1 -->

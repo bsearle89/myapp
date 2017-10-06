@@ -12,6 +12,10 @@ html, body {
 	height: 100%;
 }
 
+body {
+	margin-top: 0;
+}
+
 .page-wrap {
 	min-height: 100%;
 	margin-bottom: -50px;
@@ -33,6 +37,10 @@ h1, h2, p {
 	display: inline;
 }
 
+#bs-example-navbar-collapse-1 {
+	background-color: #f5f5f5;
+}
+
 .navbar-header .navbar-brand {
 	position: relative;
 	left: 5px;
@@ -41,29 +49,10 @@ h1, h2, p {
 	max-height: 15px;
 }
 
-.bulletin {
-	width: 20%;
+.bulletin p {
+	padding: 0px;
 }
 
-/*.navbar-form, .login-logout {
-	display: inline-block;
-}
-
-.form-text-field {
-	position: relative;
-	max-height: 30px;
-	margin-left: 10px;
-	margin-right: 5px;
-	margin-top: auto;
-	margin-bottom: auto;
-	color: grey;
-}
-
-.btn {
-	margin-right: 5px;
-	margin-top: auto;
-	margin-bottom: auto;
-}*/
 
 /**** index ****/
 
