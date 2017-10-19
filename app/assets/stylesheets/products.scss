@@ -36,3 +36,37 @@ form {
 	width: 50%;
 	margin-right: 10px;
 }
+
+/**** show ****/
+
+.product-image {
+	border: 3px solid black;
+	padding: 15px;
+}
+
+.product-title-image {
+	width: 90%;
+	float: left;
+}
+
+.product-review-row {
+	margin-top: 50px;
+}
+
+/**** typography ****/
+
+.product-show-container h3 {
+	margin-top: 0;
+	font-size: 18pt;
+	font-weight: bold;
+}
+
+.product-show-container h4 {
+	font-size: 16pt;
+	font-weight: bold;
+}
+
+.product-show-container p {
+	text-align: left;
+	font-style: italic;
+}

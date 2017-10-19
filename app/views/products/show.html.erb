@@ -1,34 +1,48 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @product.name %>
-</p>
+<div class="container product-show-container">
+  <div class="row prod-spec-row">
 
-<p>
-  <strong>Description:</strong>
-  <%= @product.description %>
-</p>
+    <div class="col-sm-12 col-md-6">
+      <div class="product-title-image">
+        <div class="product-title">
+          <h3><%= @product.name %></h3>
+        </div> <!-- end product-title -->
+        <div class="product-image">
+          <strong class="sr-only">Image url:</strong>
+          <%= image_tag @product.image_url %>
+        </div> <!-- end product-image -->
+      </div> <!-- end product-title-image -->
+    </div> <!-- end col -->
 
-<p>
-  <strong>Image url:</strong>
-  <%= @product.image_url %>
-</p>
+    <div class="col-sm-12 col-md-6">
+      <div class="product-specification">
+        <div class="product-price">
+          <h4>Price</h4>
+          <p><%= @product.price %></p>
+        </div> <!-- end price -->
+        <div class="product-colour">
+          <h4>Colour</h4>
+          <p><%= @product.colour %></p>
+        </div> <!-- end product-colour -->
+        <div class="product-description">
+          <h4>Description</h4>
+          <p><%= @product.description %></p>
+        </div> <!-- end-product-description -->
+      </div><!-- end product-specification -->
+    </div> <!-- end col -->
+  </div> <!-- end row -->
 
-<p>
-  <strong>Colour:</strong>
-  <%= @product.colour %>
-</p>
+  <div class="row product-review-row">
+    <div class="col-sm-12">
+      <div class="product-comments">
+        <h3>Product Reviews</h3>
+        <p><%= @product.highest_rating_comment %></p>
+      </div> <!-- end product-comments -->
+    </div> <!-- end col -->
+  </div> <!-- end row -->
 
-<p>
-  <strong>Price</strong>
-  <%= @product.price %>
-</p>
-
-<p>
-  <strong>Product Reviews</strong>
-  <%= @product.highest_rating_comment %>
-</p>
+</div> <!-- end container -->
 
 <%= link_to 'Edit', edit_product_path(@product) %> |
 <%= link_to 'Back', products_path %>
