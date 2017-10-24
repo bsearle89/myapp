@@ -37,11 +37,14 @@
     <div class="col-sm-12">
       <div class="product-comments">
         <h3>Product Reviews</h3>
-        <p><%= @product.highest_rating_comment %></p>
+        <% if @product.comments.present? %>
+          <p><%= @product.highest_rating_comment.body %></p>
+        <% else %>
+          <p>No one has submitted a review yet, be the first!</p>
+        <% end %>
       </div> <!-- end product-comments -->
     </div> <!-- end col -->
   </div> <!-- end row -->
-
 </div> <!-- end container -->
 
 <%= link_to 'Edit', edit_product_path(@product) %> |
