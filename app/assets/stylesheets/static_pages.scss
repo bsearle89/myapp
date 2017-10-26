@@ -56,13 +56,16 @@ h1, h2, p {
 
 /**** index ****/
 
+.container {
+	text-align: center;
+}
+
 .billboard {
-	margin-top: 75px;
-	margin-bottom: 50px;
-	margin-left: auto;
-	margin-right: auto;
-	width: 60%;
-	padding: 10px;
+	text-align: center;
+}
+
+.billboard:hover {
+	color: none;
 }
 
 /**** carousel ****/
