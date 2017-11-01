@@ -33,11 +33,18 @@
     </div> <!-- end col -->
   </div> <!-- end row -->
 
+  <div class="row add-review">
+    <div class="col-xs-12">
+      <%= render 'new_comment' %>
+    </div> <!-- end col -->
+  </div> <!-- end row -->
+
   <div class="row product-review-row">
     <div class="col-xs-12">
       <div class="product-comments">
         <h3>Product Reviews</h3>
         <% if @product.comments.present? %>
+        <%= render 'comments' %>
           <p><%= @product.highest_rating_comment.body %></p>
         <% else %>
           <p>No one has submitted a review yet, be the first!</p>
