@@ -39,6 +39,11 @@ form {
 
 /**** show ****/
 
+.col-xs-12 {
+	margin-top: 20px;
+	margin-bottom: 50px;
+}
+
 .product-hero-image {
 	width: 100%;
 	height: auto;
@@ -54,8 +59,17 @@ form {
 	float: left;
 }
 
-.product-review-row {
-	margin-top: 50px;
+.add-review h3 {
+	text-align: left;
+}
+
+.rating {
+	position: relative;
+	float: left;
+}
+
+form p input {
+	margin-top: 10px;
 }
 
 /**** typography ****/
@@ -66,12 +80,20 @@ form {
 	font-weight: bold;
 }
 
-.product-show-container h4 {
-	font-size: 16pt;
+.product-show-container h5 {
 	font-weight: bold;
 }
 
-.product-show-container p {
+.product-show-container p, h5, .rated {
 	text-align: left;
+}
+
+.product-specification p {
+	font-size: 16px;
 	font-style: italic;
 }
+
+.add-review p {
+	font-size: 16px;
+}
+
