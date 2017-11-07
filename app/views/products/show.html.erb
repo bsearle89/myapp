@@ -51,6 +51,7 @@
         <% else %>
           <p>No one has submitted a review yet, be the first!</p>
         <% end %>
+        <%= will_paginate @comments, class: 'paginated-pages' %>
       </div> <!-- end product-comments -->
     </div> <!-- end col -->
   </div> <!-- end row -->
