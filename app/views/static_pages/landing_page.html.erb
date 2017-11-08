@@ -1,9 +1,9 @@
 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
   <ol class="carousel-indicators">
-    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+    <% @products.each_with_index do |product, index| %>
+      <li data-target="#carousel-example-generic" data-slide-to=" <%= index %>" class="active <%= "active" if product == @products.first %>"></li>
+    <% end %>
   </ol>
 
   <!-- Wrapper for slides -->
@@ -28,5 +28,3 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
-
-<%= params[:example_key].to_i * 10 %>
