@@ -31,6 +31,11 @@
           <h5>Description</h5>
           <p><%= @product.description %></p>
         </div> <!-- end-product-description -->
+        <div class="stripe-form">
+          <%= form_with(url: '/payments/create') do |form| %>
+            <%= render partial: "shared/stripe_checkout_button" %>
+          <% end %>
+        </div> <!-- end stripe-form -->
       </div><!-- end product-specification -->
     </div> <!-- end col -->
   </div> <!-- end row -->
