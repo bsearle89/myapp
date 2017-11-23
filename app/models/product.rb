@@ -12,6 +12,10 @@ class Product < ApplicationRecord
 		end
 	end
 
+	def display_price
+		Product.price = (product.price / 100)
+	end
+
 	def highest_rating_comment
 		comments.rating_desc.first
 	end
