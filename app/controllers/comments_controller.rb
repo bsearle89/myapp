@@ -1,6 +1,9 @@
 class CommentsController < ApplicationController
 
+	load_and_authorize_resource
+
 	def create
+		@user = current_user
 		@product = Product.find(params[:product_id])
 		@comment = @product.comments.new(comment_params)
 		@comment.user = current_user
@@ -10,6 +13,7 @@ class CommentsController < ApplicationController
 
 	def destroy
 		@comment = Comment.find(params[:id])
+		authorize! :destroy, @comment
 		product = @comment.product
 		@comment.destroy
 		redirect_to product
