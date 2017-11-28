@@ -11,8 +11,10 @@ class ProductsController < ApplicationController
       search_term = params[:q]
       @products = Product.search(search_term)
       # return our filtered list here
+      logger.debug "Product: #{@products}"
     else
     @products = Product.all
+    logger.debug "Product: #{@products}"
     end
   end
 
@@ -24,6 +26,7 @@ class ProductsController < ApplicationController
 
   # GET /products/new
   def new
+    byebug
     @product = Product.new
   end
 
