@@ -6,7 +6,7 @@ if Rails.env.production?
 else
 	Rails.configuration.stripe = {
 		publishable_key: 'pk_test_LOrpMtCewtkndFPsbvDJdTgH',
-		secret_key: 'pk_test_LOrpMtCewtkndFPsbvDJdTgH'
+		secret_key: 'sk_test_DiDylnnuCFQnHazkfyK579Rt'
 	}
 end
 
