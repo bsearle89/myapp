@@ -10,7 +10,7 @@
         </div> <!-- end product-title -->
         <div class="product-image">
           <strong class="sr-only">Image url:</strong>
-          <%= image_tag @product.image_url, class: "product-hero-image" %>
+          <%= image_tag(@product.image_url, class: "img-zoom", data_zoom_image: "@product.image_url") %>
         </div> <!-- end product-image -->
       </div> <!-- end product-title-image -->
     </div> <!-- end col -->

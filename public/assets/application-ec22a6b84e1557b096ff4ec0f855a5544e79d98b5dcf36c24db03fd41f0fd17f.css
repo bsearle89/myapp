@@ -1,0 +1,414 @@
+.cancel-on-png, .cancel-off-png, .star-on-png, .star-off-png, .star-half-png {
+  font-size: 2em;
+}
+
+@font-face {
+  font-family: "raty";
+  font-style: normal;
+  font-weight: normal;
+  src: url("fonts/raty.eot");
+  src: url("fonts/raty.eot?#iefix") format("embedded-opentype");
+  src: url("fonts/raty.svg#raty") format("svg");
+  src: url("fonts/raty.ttf") format("truetype");
+  src: url("fonts/raty.woff") format("woff");
+}
+
+.cancel-on-png, .cancel-off-png, .star-on-png, .star-off-png, .star-half-png {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: "raty";
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  line-height: 1;
+  speak: none;
+  text-transform: none;
+}
+
+.cancel-on-png:before {
+  content: "\e600";
+}
+
+.cancel-off-png:before {
+  content: "\e601";
+}
+
+.star-on-png:before {
+  content: "\f005";
+}
+
+.star-off-png:before {
+  content: "\f006";
+}
+
+.star-half-png:before {
+  content: "\f123";
+}
+/**** index.html.erb ****/
+/* line 8, /home/ben/Desktop/myapp/app/assets/stylesheets/products.scss */
+.product-page-title {
+  margin-bottom: 75px;
+}
+
+/* line 12, /home/ben/Desktop/myapp/app/assets/stylesheets/products.scss */
+.product-columns .img-responsive {
+  max-height: 100%;
+  max-width: 100%;
+  height: 250px;
+  width: 250px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+/**** _form.html.erb ****/
+/* line 24, /home/ben/Desktop/myapp/app/assets/stylesheets/products.scss */
+form {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-display: left;
+  width: 60%;
+}
+
+/* line 32, /home/ben/Desktop/myapp/app/assets/stylesheets/products.scss */
+.form-group input {
+  width: 100%;
+}
+
+/* line 36, /home/ben/Desktop/myapp/app/assets/stylesheets/products.scss */
+.form-group textarea {
+  width: 50%;
+  margin-right: 10px;
+}
+
+/**** show ****/
+/* line 43, /home/ben/Desktop/myapp/app/assets/stylesheets/products.scss */
+.col-xs-12 {
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+
+/* line 48, /home/ben/Desktop/myapp/app/assets/stylesheets/products.scss */
+.img-zoom {
+  width: 100%;
+  height: auto;
+}
+
+/* line 53, /home/ben/Desktop/myapp/app/assets/stylesheets/products.scss */
+.product-image {
+  border: 3px solid black;
+  padding: 15px;
+}
+
+/* line 58, /home/ben/Desktop/myapp/app/assets/stylesheets/products.scss */
+.product-title-image {
+  width: 90%;
+  float: left;
+}
+
+/* line 63, /home/ben/Desktop/myapp/app/assets/stylesheets/products.scss */
+.add-review h3 {
+  text-align: left;
+}
+
+/* line 67, /home/ben/Desktop/myapp/app/assets/stylesheets/products.scss */
+.rating {
+  position: relative;
+  float: left;
+}
+
+/* line 72, /home/ben/Desktop/myapp/app/assets/stylesheets/products.scss */
+form p input {
+  margin-top: 10px;
+}
+
+/**** typography ****/
+/* line 78, /home/ben/Desktop/myapp/app/assets/stylesheets/products.scss */
+.product-show-container h3 {
+  margin-top: 0;
+  font-size: 18pt;
+  font-weight: bold;
+}
+
+/* line 84, /home/ben/Desktop/myapp/app/assets/stylesheets/products.scss */
+.product-show-container h5 {
+  font-weight: bold;
+}
+
+/* line 88, /home/ben/Desktop/myapp/app/assets/stylesheets/products.scss */
+.product-show-container p, h5, .rated {
+  text-align: left;
+}
+
+/* line 92, /home/ben/Desktop/myapp/app/assets/stylesheets/products.scss */
+.product-specification p {
+  font-size: 16px;
+  font-style: italic;
+}
+
+/* line 97, /home/ben/Desktop/myapp/app/assets/stylesheets/products.scss */
+.add-review p {
+  font-size: 16px;
+}
+/* line 1, /home/ben/Desktop/myapp/app/assets/stylesheets/scaffolds.scss */
+body {
+  background-color: #fff;
+  color: #333;
+  margin: 33px;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/* line 10, /home/ben/Desktop/myapp/app/assets/stylesheets/scaffolds.scss */
+p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/* line 16, /home/ben/Desktop/myapp/app/assets/stylesheets/scaffolds.scss */
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+/* line 22, /home/ben/Desktop/myapp/app/assets/stylesheets/scaffolds.scss */
+a {
+  color: #000;
+  /*&:hover {
+    color: #fff;
+    background-color: #000;
+  }*/
+}
+/* line 25, /home/ben/Desktop/myapp/app/assets/stylesheets/scaffolds.scss */
+a:visited {
+  color: #666;
+}
+
+/* line 35, /home/ben/Desktop/myapp/app/assets/stylesheets/scaffolds.scss */
+th {
+  padding-bottom: 5px;
+  font-style: italic;
+}
+
+/* line 40, /home/ben/Desktop/myapp/app/assets/stylesheets/scaffolds.scss */
+td {
+  padding: 0 5px 7px;
+}
+
+/* line 45, /home/ben/Desktop/myapp/app/assets/stylesheets/scaffolds.scss */
+div.field, div.actions {
+  margin-bottom: 10px;
+}
+
+/* line 50, /home/ben/Desktop/myapp/app/assets/stylesheets/scaffolds.scss */
+#notice {
+  color: green;
+}
+
+/* line 54, /home/ben/Desktop/myapp/app/assets/stylesheets/scaffolds.scss */
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+/* line 60, /home/ben/Desktop/myapp/app/assets/stylesheets/scaffolds.scss */
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px 7px 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+/* line 67, /home/ben/Desktop/myapp/app/assets/stylesheets/scaffolds.scss */
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px -7px 0;
+  background-color: #c00;
+  color: #fff;
+}
+/* line 77, /home/ben/Desktop/myapp/app/assets/stylesheets/scaffolds.scss */
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+
+/* line 83, /home/ben/Desktop/myapp/app/assets/stylesheets/scaffolds.scss */
+label {
+  display: block;
+}
+
+/* line 87, /home/ben/Desktop/myapp/app/assets/stylesheets/scaffolds.scss */
+.bulletin p {
+  font-style: italic;
+  font-size: 20px;
+}
+/**** page layout ****/
+/* line 8, /home/ben/Desktop/myapp/app/assets/stylesheets/static_pages.scss */
+* {
+  margin: 0;
+}
+
+/* line 12, /home/ben/Desktop/myapp/app/assets/stylesheets/static_pages.scss */
+html, body {
+  height: 100%;
+}
+
+/* line 16, /home/ben/Desktop/myapp/app/assets/stylesheets/static_pages.scss */
+body {
+  margin-top: 0;
+}
+
+/* line 20, /home/ben/Desktop/myapp/app/assets/stylesheets/static_pages.scss */
+.page-wrap {
+  min-height: 100%;
+  margin-bottom: -50px;
+}
+
+/* line 25, /home/ben/Desktop/myapp/app/assets/stylesheets/static_pages.scss */
+.page-wrap:after {
+  content: "";
+  display: block;
+}
+
+/* line 30, /home/ben/Desktop/myapp/app/assets/stylesheets/static_pages.scss */
+h1, h2, p {
+  text-align: center;
+}
+
+/**** navigation bar ****/
+/* line 36, /home/ben/Desktop/myapp/app/assets/stylesheets/static_pages.scss */
+.navbar {
+  max-height: 30px;
+  display: inline;
+}
+
+/* line 41, /home/ben/Desktop/myapp/app/assets/stylesheets/static_pages.scss */
+#bs-example-navbar-collapse-1 {
+  background-color: #f5f5f5;
+}
+
+/* line 45, /home/ben/Desktop/myapp/app/assets/stylesheets/static_pages.scss */
+.navbar-header .navbar-brand {
+  position: relative;
+  left: 5px;
+  bottom: 10px;
+  width: 70px;
+  max-height: 15px;
+}
+
+/* line 53, /home/ben/Desktop/myapp/app/assets/stylesheets/static_pages.scss */
+.bulletin p {
+  padding: 0px;
+}
+
+/**** index ****/
+/* line 60, /home/ben/Desktop/myapp/app/assets/stylesheets/static_pages.scss */
+.container {
+  text-align: center;
+}
+
+/* line 64, /home/ben/Desktop/myapp/app/assets/stylesheets/static_pages.scss */
+.billboard {
+  text-align: center;
+}
+
+/* line 68, /home/ben/Desktop/myapp/app/assets/stylesheets/static_pages.scss */
+.billboard:hover {
+  color: none;
+}
+
+/**** carousel ****/
+/* line 74, /home/ben/Desktop/myapp/app/assets/stylesheets/static_pages.scss */
+.carousel-image {
+  max-height: 100%;
+  max-width: 100%;
+  height: 450px;
+  width: 450px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 83, /home/ben/Desktop/myapp/app/assets/stylesheets/static_pages.scss */
+.carousel-caption {
+  position: absolute;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 32px;
+  text-shadow: 3px 2px black;
+  font-weight: bold;
+}
+
+/**** contact form ****/
+/**** sticky footer ****/
+/* line 99, /home/ben/Desktop/myapp/app/assets/stylesheets/static_pages.scss */
+.site-footer, .page-wrap:after {
+  height: 50px;
+}
+
+/* line 103, /home/ben/Desktop/myapp/app/assets/stylesheets/static_pages.scss */
+.site-footer {
+  background: #f5f5f5;
+}
+
+/* line 107, /home/ben/Desktop/myapp/app/assets/stylesheets/static_pages.scss */
+.site-footer p {
+  position: relative;
+  left: 15px;
+  top: 15px;
+}
+
+/**** typography****/
+/* line 115, /home/ben/Desktop/myapp/app/assets/stylesheets/static_pages.scss */
+h1,
+h2,
+h3,
+p {
+  font-family: 'arial black, arial, tahoma, sans-serif';
+}
+
+/* line 122, /home/ben/Desktop/myapp/app/assets/stylesheets/static_pages.scss */
+h1 {
+  font-weight: 800;
+}
+
+/* line 126, /home/ben/Desktop/myapp/app/assets/stylesheets/static_pages.scss */
+p {
+  font-size: 18pt;
+}
+/* line 5, /home/ben/Desktop/myapp/app/assets/stylesheets/users.scss */
+form {
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* line 12, /home/ben/Desktop/myapp/app/assets/stylesheets/users.scss */
+.form-check {
+  display: inline;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
+
