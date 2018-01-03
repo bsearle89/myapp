@@ -52,8 +52,8 @@
       <div class="product-comments">
         <h5>Product Reviews</h5>
         <% if @product.highest_rating_comment %>
-        <%= render 'comments' %>
           <p><%= @product.highest_rating_comment.body %></p>
+          <%= render 'comments' %>
         <% else %>
           <p>No one has submitted a review yet, be the first!</p>
         <% end %>
