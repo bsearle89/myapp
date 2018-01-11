@@ -6,7 +6,9 @@
     <div class="col-xs-12 col-sm-6">
       <div class="product-title-image">
         <div class="product-title">
-          <h3><%= @product.name %></h3>
+          <% cache @product do %>
+            <h3><%= @product.name %></h3>
+          <% end %>
         </div> <!-- end product-title -->
         <div class="product-image">
           <strong class="sr-only">Image url:</strong>
@@ -52,7 +54,7 @@
       <div class="product-comments">
         <h5>Product Reviews</h5>
         <% if @product.highest_rating_comment %>
-          <div class="rated" data-score="@product.highest_rating_comment.rating"></div> <br>
+          <div class="top-rated rated" data-score="5"></div> <br>
           <p>
             <%= @product.highest_rating_comment.body %>  
           </p>
