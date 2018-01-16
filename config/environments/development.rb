@@ -53,4 +53,7 @@ Rails.application.configure do
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 
   config.action_mailer.default_url_options = { host: 'localhost:3000' }
+
+  #app generators created in JavaScript, not CoffeeScript
+  config.app_generators.javascript_engine = :javascript
 end

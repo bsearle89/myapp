@@ -58,6 +58,7 @@
           <p>
             <%= @product.highest_rating_comment.body %>  
           </p>
+          <div class="alert alert-info" style="display:none" role="alert"> A new comment was posted!</div>
           <%= render 'comments' %>
         <% else %>
           <p>No one has submitted a review yet, be the first!</p>
