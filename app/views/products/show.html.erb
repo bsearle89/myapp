@@ -54,7 +54,7 @@
       <div class="product-comments">
         <h5>Product Reviews</h5>
         <% if @product.highest_rating_comment %>
-          <div class="top-rated rated" data-score="5"></div> <br>
+          <div class="top-rated rated" data-score="<%= @product.highest_rating_comment.rating %>"></div> <br>
           <p>
             <%= @product.highest_rating_comment.body %>  
           </p>
