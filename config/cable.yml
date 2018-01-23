@@ -7,4 +7,4 @@ test:
 production:
   adapter: postgresql
   url: postgres://zwwmhejelclvci:1aeaa6294d2ff4a54e95a7f96084e1195ccceb44a45b6cca23766c323af875f6@ec2-50-19-218-160.compute-1.amazonaws.com:5432/d5f18o1ms8jbpg
-  #channel_prefix: myapp_production
+  channel_prefix: myapp_production
