@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <div class="container product-show-container">
-  <div class="row prod-spec-row">
+  <div class="row prod-spec-row" data-product-id="<%= @product.id %>">
 
     <div class="col-xs-12 col-sm-6">
       <div class="product-title-image">
@@ -46,6 +46,9 @@
   <div class="row add-review">
     <div class="col-xs-12">
       <%= render 'new_comment' %>
+      <div class="alert alert-info" style="display:none" role="alert">
+        A new comment was posted!
+      </div><!-- end alert -->
     </div> <!-- end col -->
   </div> <!-- end row -->
 
@@ -58,7 +61,6 @@
           <p>
             <%= @product.highest_rating_comment.body %>  
           </p>
-          <div class="alert alert-info" style="display:none" role="alert"> A new comment was posted!</div>
           <%= render 'comments' %>
         <% else %>
           <p>No one has submitted a review yet, be the first!</p>
