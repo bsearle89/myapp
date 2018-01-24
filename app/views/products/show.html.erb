@@ -61,7 +61,9 @@
           <p>
             <%= @product.highest_rating_comment.body %>  
           </p>
-          <%= render 'comments' %>
+          <div class="new-product-review">
+            <%= render 'comments' %>
+          </div>
         <% else %>
           <p>No one has submitted a review yet, be the first!</p>
         <% end %>
