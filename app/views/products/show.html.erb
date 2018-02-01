@@ -73,5 +73,9 @@
   </div> <!-- end row -->
 </div> <!-- end container -->
 
-<%= link_to 'Edit', edit_product_path(@product) %> |
-<%= link_to 'Back', products_path %>
+<% if signed_in? %>
+  <% if current_user.admin? %>
+    <%= link_to 'Edit', edit_product_path(@product) %> |
+    <%= link_to 'Back', products_path %>
+  <% end %>
+<% end %>

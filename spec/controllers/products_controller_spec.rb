@@ -2,7 +2,7 @@ require 'rails_helper'
 
 describe ProductsController, type: :controller do
 
-	#index action
+#index action
 	context 'GET #index' do
 		it 'renders the index page' do
 			get :index
@@ -25,8 +25,8 @@ describe ProductsController, type: :controller do
 	context 'POST #update' do
 		before do
 			@product = FactoryBot.create(:product)
-			@user = FactoryBot.build(:user)
-			sign_in @user
+			@admin = FactoryBot.build(:admin)
+			sign_in @admin
 		end
 		it "updates product information" do
 			@update = { name: @product.name, image_url: "http://www.image.com", price: @product.price, colour: "black" }
@@ -40,8 +40,8 @@ describe ProductsController, type: :controller do
 	context "delete" do
 		before do
 			@product = FactoryBot.create(:product)
-			@user = FactoryBot.create(:user)
-			sign_in @user
+			@admin = FactoryBot.create(:admin)
+			sign_in @admin
 		end
 		it "deletes product" do 
 			delete :destroy, params: { id: @product }

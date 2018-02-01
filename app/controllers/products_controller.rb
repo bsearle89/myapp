@@ -1,4 +1,5 @@
 class ProductsController < ApplicationController
+  load_and_authorize_resource
   before_action :set_product, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, except: [:show, :index]
  
@@ -6,7 +7,7 @@ class ProductsController < ApplicationController
   # GET /products.json
   def index
 
-    @products = Product.paginate(:page => params[:page], :per_page => 6)
+    @products = Product.paginate(:page => params[:page], :per_page => 12)
     
     if params[:q]
       search_term = params[:q]
@@ -67,7 +68,6 @@ class ProductsController < ApplicationController
   # DELETE /products/1
   # DELETE /products/1.json
   def destroy
-    load_and_authorize_resource
     @product.destroy
     respond_to do |format|
       format.html { redirect_to products_url, notice: 'Product was successfully destroyed.' }
