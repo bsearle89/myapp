@@ -1,5 +1,4 @@
 class ProductsController < ApplicationController
-  load_and_authorize_resource
   before_action :set_product, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, except: [:show, :index]
  
@@ -39,6 +38,7 @@ class ProductsController < ApplicationController
   # POST /products.json
   def create
     @product = Product.new(product_params)
+    authorize! :create, @product
 
     respond_to do |format|
       if @product.save

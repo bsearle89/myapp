@@ -2,6 +2,14 @@ require 'rails_helper'
 
 describe ProductsController, type: :controller do
 
+	before(:each) do
+		@admin = FactoryBot.create(:admin)
+	end
+
+	before(:each) do
+		@product = FactoryBot.create(:product)
+	end
+
 #index action
 	context 'GET #index' do
 		it 'renders the index page' do
@@ -14,7 +22,7 @@ describe ProductsController, type: :controller do
 	#show action
 	context 'GET #show' do
 		it 'renders the show page' do
-			@product = FactoryBot.create(:product)
+			#@product = FactoryBot.create(:product)
 			get :show, params: {id: @product}
 			expect(response).to be_ok
 			expect(response).to render_template('show')
@@ -24,8 +32,8 @@ describe ProductsController, type: :controller do
 	#create action
 	context 'POST #update' do
 		before do
-			@product = FactoryBot.create(:product)
-			@admin = FactoryBot.build(:admin)
+			#@product = FactoryBot.create(:product)
+			#@admin = FactoryBot.create(:admin)
 			sign_in @admin
 		end
 		it "updates product information" do
@@ -39,8 +47,8 @@ describe ProductsController, type: :controller do
 	#delete action
 	context "delete" do
 		before do
-			@product = FactoryBot.create(:product)
-			@admin = FactoryBot.create(:admin)
+			#@product = FactoryBot.create(:product)
+			#@admin = FactoryBot.create(:admin)
 			sign_in @admin
 		end
 		it "deletes product" do 
