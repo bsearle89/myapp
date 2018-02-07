@@ -44,6 +44,13 @@ class UsersController < ApplicationController
     end
   end
 
+  def signup_confirmation
+    @email = params[:email]
+    @message = params[:message]
+    ActionMailer::Base.mail(from: @email, to: user.email, subject: 'Welcome!', body: @message).deliver_now
+    UserMailer.signup_confirmation(@email, @message).deliver_now
+  end
+
   # PATCH/PUT /users/1
   # PATCH/PUT /users/1.json
   def update

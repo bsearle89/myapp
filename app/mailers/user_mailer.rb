@@ -7,10 +7,9 @@ class UserMailer < ApplicationMailer
 			 :body => "You have a new message from #{email} with the following messsage: #{message}")
 	end
 
-	def thank_you
-		@name = params[:name]
-		@email = params[:email]
-		@message = params[:message]
-		UserMailer.contact_form(@email, @name, @message).deliver_now
+	def signup_confirmation(email)
+		mail(:to => user.email,
+			 :subtject => "Welcome!",
+			 :body => "Thank you for creating your account with us!")
 	end
 end
