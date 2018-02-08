@@ -6,12 +6,7 @@ class UsersController < ApplicationController
   # GET /users
   # GET /users.json
   def index
-    @user = current_user
-    if current_user.admin?
-      @users = User.all
-    else
-      @user = current_user
-    end
+    @users = User.all
   end
 
   # GET /users/1
@@ -42,13 +37,6 @@ class UsersController < ApplicationController
         format.json { render json: @user.errors, status: :unprocessable_entity }
       end
     end
-  end
-
-  def signup_confirmation
-    @email = params[:email]
-    @message = params[:message]
-    ActionMailer::Base.mail(from: @email, to: user.email, subject: 'Welcome!', body: @message).deliver_now
-    UserMailer.signup_confirmation(@email, @message).deliver_now
   end
 
   # PATCH/PUT /users/1

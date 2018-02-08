@@ -23,6 +23,8 @@ class PaymentsController < ApplicationController
 					total: @product.price
 				)
 				flash[:success] = "Your payment was processed successfully"
+
+				UserMailer.payment_confirmation(@email, @product, @message).deliver_now
 			end
 
 		rescue Stripe::CardError => e
@@ -34,12 +36,4 @@ class PaymentsController < ApplicationController
 
 		redirect_to product_path(@product), notice: 'Payment Successful'
 	end
-
-	def payment_confirmation
-		@email = params[:email]
-		@message = params[:message]
-		ActionMailer::Base.mail(from: @email, to: @user.email, subject: 'Thank you for your order!', body: @message).deliver_now
-  		UserMailer.payment_confirmation(@email, @name, @message).deliver_now
-	end
-
 end
